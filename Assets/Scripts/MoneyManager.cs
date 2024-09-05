@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -11,12 +12,16 @@ public class MoneyManager : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+        _money = PlayerPrefs.GetInt("_money");
+        _moneyText.text = _money.ToString();
     }
 
     public void AddMoney(int money)
     {
         _money += money;
-        _moneyText.text = money.ToString();
+        _moneyText.text = _money.ToString();
+        _moneyText.transform.DOShakePosition(.3f, 5, 20);
+        PlayerPrefs.SetInt("_money", _money);
     }
 
 }

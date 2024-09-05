@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -64,9 +65,10 @@ public class Slot : MonoBehaviour, IDropHandler
                 scoreAdd = 70;
                 break;
         }
-        Instantiate(_gameManager.GameItemPrefabs[prefabNum], transform);
-        _gameManager.AddScore(scoreAdd);
+        var newGO = Instantiate(_gameManager.GameItemPrefabs[prefabNum], transform);
+        newGO.transform.DOShakeScale(.3f, .3f, 10);
         Destroy(child);
         Destroy(dropped);
+        _gameManager.AddScore(scoreAdd);
     }
 }

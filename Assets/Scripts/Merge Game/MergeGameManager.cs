@@ -21,12 +21,13 @@ public class MergeGameManager : MonoBehaviour
     }
     private void Start()
     {
-        for (int i = 0; i < 3; i++)
-        {
-            SpawnItem(GameItemPrefabs[Random.Range(0, 3)]);
-        }
-        _targetScore = 100;
-        _tScore_Text.text = _tScore_Text.text;
+        SpawnStartItems();
+        if (PlayerPrefs.HasKey("_targetScore"))
+            _targetScore = PlayerPrefs.GetInt("_targetScore");
+        else
+            _targetScore = 100;     //default value for the first game load
+
+        _tScore_Text.text = _targetScore.ToString();
     }
 
     public void SpawnItem(GameObject spawnItem)
@@ -54,14 +55,40 @@ public class MergeGameManager : MonoBehaviour
         yield return null;
     }
 
+    void SpawnStartItems()
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            SpawnItem(GameItemPrefabs[Random.Range(0, 3)]);
+        }
+    }
+
     public void AddScore(int score)
     {
         _currentScore += score;
-        _cScore_Text.text = _currentScore.ToString();
         if (_currentScore >= _targetScore)
         {
-            _currentScore = _targetScore;
-            MoneyManager.Instance.AddMoney(200);
+            Win();
         }
+        _cScore_Text.text = _currentScore.ToString();
+    }
+
+    void Win()
+    {
+        _currentScore = 0;
+        _targetScore += 100;
+        _tScore_Text.text = _targetScore.ToString();
+        PlayerPrefs.SetInt("_targetScore", _targetScore);
+        MoneyManager.Instance.AddMoney(200);
+
+        foreach (GameObject slot in _slots)
+        {
+            if (slot.transform.childCount > 0) 
+            {
+                Destroy(slot.transform.GetChild(0).gameObject);
+            }
+        }
+
+        SpawnStartItems();
     }
 }
