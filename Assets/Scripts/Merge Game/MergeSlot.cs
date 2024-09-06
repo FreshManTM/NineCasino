@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class Slot : MonoBehaviour, IDropHandler
+public class MergeSlot : MonoBehaviour, IDropHandler
 {
     GameObject dropped;
     GameObject child;
