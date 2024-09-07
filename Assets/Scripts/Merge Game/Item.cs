@@ -16,6 +16,7 @@ public class Item : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHand
     {
         DOTween.KillAll(transform);
         transform.DOShakeScale(.3f, .3f, 10);
+
         ParentAfterDrag = transform.parent;
         transform.SetParent(transform.root);
         transform.SetAsLastSibling();
