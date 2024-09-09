@@ -32,6 +32,7 @@ public class MinesweeperManager : MonoBehaviour
         {
             slot.SlotReset();
         }
+        _revealedSlots = 0;
         _winCanvas.SetActive(false);
         _loseCanvas.SetActive(false);
         SpawnBombs();
