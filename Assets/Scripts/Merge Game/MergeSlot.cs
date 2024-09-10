@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 
 public class MergeSlot : MonoBehaviour, IDropHandler
 {
+    [SerializeField] AudioSource _mergeSound;
     GameObject dropped;
     GameObject child;
     Item item;
@@ -36,6 +37,7 @@ public class MergeSlot : MonoBehaviour, IDropHandler
 
     void MergeItems()
     {
+        _mergeSound.Play();
         int prefabNum = 0;
         int scoreAdd = 0;
         switch (child.tag)

@@ -20,8 +20,29 @@ public class MoneyManager : MonoBehaviour
     {
         _money += money;
         _moneyText.text = _money.ToString();
+        _moneyText.DOColor(Color.yellow, .2f).OnComplete(() => _moneyText.DOColor(Color.white, .2f));
         _moneyText.transform.DOShakePosition(.3f, 5, 20);
         PlayerPrefs.SetInt("_money", _money);
+    }
+
+    public bool RemoveMoney(int money)
+    {
+        if (_money - money >= 0)
+        {
+            _money -= money;
+            _moneyText.text = _money.ToString();
+            _moneyText.transform.DOShakePosition(.3f, 5, 20);
+            PlayerPrefs.SetInt("_money", _money);
+
+            return true;
+        }
+        else
+        {
+            _moneyText.DOColor(Color.red, .2f).OnComplete(() => _moneyText.DOColor(Color.white, .2f));
+            _moneyText.transform.DOShakePosition(.3f, 5, 20);
+
+            return false;
+        }
     }
 
 }

@@ -13,19 +13,19 @@ MonoBehaviour:
   m_Name: Character 3
   m_EditorClassIdentifier: 
   Name: Spot the Leopard
-  Description: 'Leo is the king of the savannah, uniting big cats under his leadership. '
+  Description: Spot is a master of camouflage, blending seamlessly into his surroundings.
   UpgradeName:
-  - Mane Power
-  - "King\u2019s Roar"
-  - "Hunter\u2019s Agility"
-  - Savannah Shield
-  - "Pride\u2019s Blessing"
-  - "King\u2019s Aura"
+  - Camouflage
+  - Quick Strike
+  - Ghostly Steps
+  - Savannah Sprint
+  - "Hunter\u2019s Focus"
+  - Blitz Attack
   UpgradeDescription:
-  - "Enhances Leo\u2019s royal mane."
-  - Grants a powerful, commanding roar.
-  - "Boosts Leo\u2019s agility."
-  - Provides a natural defense.
-  - "Increases Leo\u2019s vitality."
-  - "Expands Leo\u2019s influence."
+  - "Enhances Spot\u2019s blending ability."
+  - "Increases Spot\u2019s agility."
+  - "Makes Spot\u2019s movements nearly invisible."
+  - "Boosts Spot\u2019s speed."
+  - "Sharpens Spot\u2019s aim."
+  - "Strengthens Spot\u2019s strikes."
   UpgradePrice: c80000002c01000090010000f401000058020000

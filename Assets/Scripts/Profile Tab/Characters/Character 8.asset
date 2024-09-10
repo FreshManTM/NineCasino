@@ -13,19 +13,20 @@ MonoBehaviour:
   m_Name: Character 8
   m_EditorClassIdentifier: 
   Name: Pounce the Caracal
-  Description: 'Leo is the king of the savannah, uniting big cats under his leadership. '
+  Description: Pounce is the agile predator of savannahs and deserts, known for his
+    leaping ability.
   UpgradeName:
-  - Mane Power
-  - "King\u2019s Roar"
-  - "Hunter\u2019s Agility"
-  - Savannah Shield
-  - "Pride\u2019s Blessing"
-  - "King\u2019s Aura"
+  - Desert Agility
+  - Sharp Ears
+  - High Leap
+  - Sand Camouflage
+  - Quick Reflexes
+  - Heat Resistance
   UpgradeDescription:
-  - "Enhances Leo\u2019s royal mane."
-  - Grants a powerful, commanding roar.
-  - "Boosts Leo\u2019s agility."
-  - Provides a natural defense.
-  - "Increases Leo\u2019s vitality."
-  - "Expands Leo\u2019s influence."
+  - Enhances agility in arid environments.
+  - Refines hearing for detecting hidden dangers.
+  - Boosts jumping ability.
+  - Enhances concealment in deserts.
+  - Improves reflexes for quick responses.
+  - Increases tolerance to heat.
   UpgradePrice: c80000002c01000090010000f401000058020000

@@ -24,6 +24,7 @@ public class UIManager : MonoBehaviour
         //}
         _tabButtonImages[tabNum].color = _selectedButtonColor;
         _tabToMove.transform.DOLocalMoveX(-_tabsTransform[tabNum].localPosition.x, 1f);
+        //.OnComplete(() => DisableTab(tabNum))
         _tabButtonImages[_prevTabNumber].color = Color.white;
         _prevTabNumber = tabNum;
     }
@@ -32,7 +33,7 @@ public class UIManager : MonoBehaviour
     //{
     //    foreach (var tab in _tabsTransform)
     //    {
-    //        if(tab != _tabsTransform[currentTab])
+    //        if (tab != _tabsTransform[currentTab])
     //        {
     //            tab.gameObject.SetActive(false);
     //        }
@@ -41,6 +42,6 @@ public class UIManager : MonoBehaviour
     //            tab.gameObject.SetActive(true);
     //        }
     //    }
-        
+
     //}
 }

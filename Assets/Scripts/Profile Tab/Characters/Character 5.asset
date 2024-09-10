@@ -13,19 +13,19 @@ MonoBehaviour:
   m_Name: Character 5
   m_EditorClassIdentifier: 
   Name: Dash the Cheetah
-  Description: 'Leo is the king of the savannah, uniting big cats under his leadership. '
+  Description: Dash is the fastest land animal, known for his incredible speed.
   UpgradeName:
-  - Mane Power
-  - "King\u2019s Roar"
-  - "Hunter\u2019s Agility"
-  - Savannah Shield
-  - "Pride\u2019s Blessing"
-  - "King\u2019s Aura"
+  - Explosive Speed
+  - Lightning Strike
+  - Sharp Claws
+  - Endurance Run
+  - Fleet Footed
+  - Swift Recovery
   UpgradeDescription:
-  - "Enhances Leo\u2019s royal mane."
-  - Grants a powerful, commanding roar.
-  - "Boosts Leo\u2019s agility."
-  - Provides a natural defense.
-  - "Increases Leo\u2019s vitality."
-  - "Expands Leo\u2019s influence."
+  - "Increases Dash\u2019s speed."
+  - "Enhances Dash\u2019s striking ability."
+  - "Strengthens Dash\u2019s claws."
+  - "Boosts Dash\u2019s stamina."
+  - "Refines Dash\u2019s agility."
+  - "Speeds up Dash\u2019s recovery."
   UpgradePrice: c80000002c01000090010000f401000058020000

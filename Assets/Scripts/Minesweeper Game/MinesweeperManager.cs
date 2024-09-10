@@ -41,13 +41,13 @@ public class MinesweeperManager : MonoBehaviour
     {
         slot.SlotReveal();
         _revealedSlots++;
-        print(_revealedSlots + " | " + _slots.Length + " " + _bombAmount);
         foreach (var bombPos in _bombPoses)
         {
             if (slot.Position == bombPos)
             {
                _isWin = false;
                 StartCoroutine(IAllBombsReveal());
+                _revealedSlots--;
 
             }
         }
